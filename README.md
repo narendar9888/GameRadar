@@ -53,22 +53,8 @@ gaming-info-app/
 
 ---
 
-## ▶️ How to Run
 
-1. Clone the repository
-2. Add your API key in `script.js`
-3. Open `index.html`
 
----
-
-## 🔥 Future Improvements
-
-* Pagination
-* Infinite scroll
-* Game trailers
-* UI animations
-
----
 
 ## 👨‍💻 Author
 

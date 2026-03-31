@@ -1,0 +1,169 @@
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: white;
+    border-bottom: solid 1px rgba(59, 59, 59, 0.662);
+}
+
+h1 {
+    font-size: 28px;
+}
+ */
+
+
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 25px 15px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 25px auto;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.search-section input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-section button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-section button:hover {
+  background: #1d4ed8;
+}
+
+.loading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #475569;
+  border-top: 5px solid #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  background: #7f1d1d;
+  color: #fecaca;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.game-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.game-content {
+  padding: 15px;
+}
+
+.game-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.game-content p {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-section button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameRadar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🎮 GameRadar</h1>
+    <p>Search and explore your favorite games</p>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search games..."
+      />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Loading games...</p>
+    </section>
+
+    <section id="error" class="error hidden"></section>
+
+    <section id="gameContainer" class="game-grid"><h2>Popular Games</h2></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

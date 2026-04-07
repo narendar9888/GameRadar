@@ -4,34 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GameRadar</title>
+  <link rel="icon" href="img/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
-    <h1>🎮 GameRadar</h1>
-    <p>Search and explore your favorite games</p>
+    <div class="logo-container">
+      <img src="img/logo.png" alt="GameRadar Logo" class="logo" />
+      <h1>GameRadar</h1>
+    </div>
+
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
   </header>
 
   <main class="container">
-    <section class="search-section">
+    <section class="controls">
       <input
         type="text"
         id="searchInput"
+        class="input"
         placeholder="Search games..."
       />
-      <button id="searchBtn">Search</button>
+
+      <select id="platformFilter" class="input">
+        <option value="all">All Platforms</option>
+        <option value="pc">PC</option>
+        <option value="playstation">PlayStation</option>
+        <option value="xbox">Xbox</option>
+        <option value="nintendo">Nintendo</option>
+      </select>
+
+      <select id="genreFilter" class="input">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="rpg">RPG</option>
+        <option value="shooter">Shooter</option>
+        <option value="sports">Sports</option>
+        <option value="racing">Racing</option>
+      </select>
+
+      <select id="sortSelect" class="input">
+        <option value="default">Sort By</option>
+        <option value="ratingDesc">Rating High to Low</option>
+        <option value="ratingAsc">Rating Low to High</option>
+        <option value="dateDesc">Newest First</option>
+        <option value="dateAsc">Oldest First</option>
+        <option value="az">Name A-Z</option>
+        <option value="za">Name Z-A</option>
+      </select>
     </section>
 
-    <section id="loading" class="loading hidden">
-      <div class="spinner"></div>
-      <p>Loading games...</p>
+    <section class="status">
+      <div id="loading" class="loading hidden">Loading games...</div>
+      <div id="error" class="error hidden"></div>
     </section>
 
-    <section id="error" class="error hidden"></section>
+    <section>
+      <h2 class="section-title">Games</h2>
+      <div id="gameContainer" class="game-grid"></div>
+    </section>
 
-    <section id="gameContainer" class="game-grid"><h2>Popular Games</h2></section>
+    <section>
+      <h2 class="section-title">⭐ Favorites</h2>
+      <div id="favoritesContainer" class="game-grid"></div>
+    </section>
   </main>
+
+  <div id="gameModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+

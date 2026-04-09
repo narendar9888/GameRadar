@@ -29,7 +29,7 @@ GameRadar is a modern gaming info web app that allows users to explore video gam
 * CSS
 * JavaScript
 * Fetch API
-* Local Storage
+
 
 ---
 
